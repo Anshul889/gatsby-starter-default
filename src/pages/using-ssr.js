@@ -9,11 +9,9 @@ const UsingSSR = ({ serverData }) => {
     <Layout>
       <Seo title="Using SSR" />
       <h1>SSR page</h1>
-      <img
-        style={{ width: "300px" }}
-        alt="A random dog"
-        src={serverData.message}
-      />
+      <p>{serverData.name}</p>
+      <p>{serverData.height}</p>
+      <p>{serverData.mass}</p>
       <p>Welcome to a server side rendered page with a random dog photo</p>
       <p>
         To learn more, head over to our{" "}
@@ -31,7 +29,7 @@ export default UsingSSR
 
 export async function getServerData() {
   try {
-    const res = await fetch(`https://dog.ceo/api/breeds/image/random`)
+    const res = await fetch(`https://swapi.dev/api/people/2`)
     if (!res.ok) {
       throw new Error(`Response failed`)
     }
