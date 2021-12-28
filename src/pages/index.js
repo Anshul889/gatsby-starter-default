@@ -10,9 +10,10 @@ const IndexPage = () => (
     <Seo title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
+    <div style={{ width: '100%'}}></div>
     <StaticImage
       src="../images/gatsby-astronaut.png"
-      width={300}
+      width={"50%"}
       quality={95}
       formats={["auto", "webp", "avif"]}
       alt="A Gatsby astronaut"
